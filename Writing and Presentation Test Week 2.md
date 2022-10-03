@@ -102,7 +102,7 @@ link.style.backgroundColor = "pink"
 
 Contoh :
 ```
-// DOM FORM Submit event button
+// contoh untuk FORM Submit event button
 
 function logSubmit(event) {
     log.textContent = `Pesan telah Terkirim! Terimakasih.`;
