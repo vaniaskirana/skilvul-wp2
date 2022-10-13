@@ -8,10 +8,34 @@
 
   <br><b>A. Scope</b><hr> Scope sendiri memiliki tugas untuk membatasi pengaksesan pada suatu variable, Scope terdiri dari 2 jenis yaitu :<br>
     
-   - Global Scope : Lingkup global memiliki artian "everywhere" dimana variable yang memiliki ciri global scope ini dapat diakses dalam blok atau fungsi manapun(sifatnya tidak terbatas).
+   - Global Scope : Lingkup global memiliki artian "everywhere" dimana variable yang memiliki ciri global scope ini dapat diakses dalam blok atau fungsi manapun(sifatnya tidak terbatas). Global scope ini dapat diletakkan di luar function yaa, jadi kita bisa memanggilnya dimana saja.
+
+   ```
+   let tahunLahir = 2001;
+      {
+         let tahun_sekarang = 2022;
+         let umur_sekarang = tahun_sekarang - tahunLahir;
+
+         console.log(umur_sekarang);
+      }
+   
+   // tahun dapat digunakan di dalam ataupun diluar blok {}
+
+   ```
     
    
-   - Local Scope : Berbeda dengan global scope, Local scope ini hanya dapat diakses pada 1 blok nya itu sendiri(sangat terbatas).
+   - Local Scope : Berbeda dengan global scope, Local scope ini hanya dapat diakses pada 1 blok nya itu sendiri(sangat terbatas). Jadi kita tidak bisa memanggil local variable ini di luar bloknya itu sendiri.
+
+   ```
+         {
+            let tahunLahir = 2001;
+            let tahun_sekarang = 2022;
+         }
+            let umur_sekarang = tahun_sekarang - tahunLahir;
+            console.log(umur_sekarang);
+
+      // tahun_sekarang dan tahun_lahir tidak dapat digunakan di dalam ataupun diluar blok {}
+   ```
   
 
    <br><b>B. Function</b><hr>Fungsi merupakan sebuah blok kode yang dapat membungkus dan menjalankan perintah hanya dengan memanggil fungsinya itu sendiri.<br>
@@ -28,14 +52,31 @@
    ```
 <br>
 <br>
-   ### **2. JavaScript Dasar - Data Type and Data Structure**
+
+### **2. JavaScript Dasar - Data Type and Data Structure**
 
 - Dalam Javascript terdapat beberapa yang masuk kedalam "Data Type dan Data Struktur" :
  ```
-    1. String
-    2. Number 
-    3. Math
+    1. String : Adalah tipe data yang tidak bisa diolah dalam bentuk aritmatika, namun tipe data ini dapat mengisi sebuah angka juga.
+    2. Number : Pada Javascript tidak ada integer, float, dan lainnya. Melainkan adanya tipe data Number, tipe data ini dapat dilakukan proses aritmatika
+    3. Math : Math ini menyediakan operasi aritmatika
     4. Primitive dan Non Primitive : Tipe data Primitive bersifat immutable, maksudnya dalam tipe data jenis ini nilai tidak dapat dirubah ataupun dimanipulasi. Begitu juga untuk Non-Primitive sebaliknya.
+ ```
+
+
+ ```
+typeof undefined // "undefined"
+
+typeof 0 // "number"
+
+typeof true // "boolean"
+
+typeof "halooo" // "string"
+
+typeof Math // "object"  (1)
+
+typeof null // "object"  (2)
+
  ```
 
 ### **3. JavaScript Dasar - DOM Manipulation**
@@ -43,7 +84,7 @@
 - DOM Manipulation merupakan sebuah Teknik, yang mana teknik ini sangatlah penting dalam dunia perwebsite-an apalagi jika kita menggunakan bahasa JavaScript. DOM Manipulation itu sendiri adalah teknik yang dapat membuat tampilan website menjadi lebih interaktif dan dinamis, disini kita juga bisa melakukan perubahan style pada HTML tanpa harus menggunakan CSS juga. Berikut adalah perintah untuk melakukan manipulasi :
 
 
-a. <b>innerHTML</b> : <hr> Merupakan perintah yang dapat menyisipkan sebuah value bertipe string pada sebuah variable.
+a. <b>innerHTML</b> : <hr> Merupakan perintah yang dapat menyisipkan sebuah value bertipe string pada sebuah variable. Dan unik nya lagi, pada DOM ini kita dapat menyisipkan element HTML lho.
 
 ```
     
@@ -56,10 +97,30 @@ a. <b>innerHTML</b> : <hr> Merupakan perintah yang dapat menyisipkan sebuah valu
     let vania = document.getElementById("vania")
     console.log(vania)
 
-    vania.innerHTML = " Halo perkenalkan nama saya Vania "
+    vania.innerHTML = ' <h1>Hai nama saya Vania</h1>
+                  <p>Saya merupakan mahasiswa dari Studi
+                  Independen Kampus Merdeka.</p>
+          '
 
 ```
 b. <b>innerText</b> : <hr> Mirip dengan innerHTML di atas. Perintah ini dapat menyisipkan sebuah value bertipe string pada sebuah variable, hanya saja pada innerText ini tidak bisa menyisipkan tag HTML.
+
+```
+    
+    --html---------
+    <body>
+        <div id="vania"></div>
+    </body>
+
+    --js-----------
+    let vania = document.getElementById("vania")
+    console.log(vania)
+
+    vania.innerText = 'Hai nama saya Vania. Saya merupakan mahasiswa dari Studi
+                  Independen Kampus Merdeka.
+          '
+
+```
 
 c. <b>.createElement</b> : <hr> Merupakan perintah manipulasi yang dapat menyisipkan sebuah element ke dalam tag HTML.
 
