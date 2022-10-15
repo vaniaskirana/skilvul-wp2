@@ -157,26 +157,26 @@ link.style.padding = "5px 20px"
 link.style.backgroundColor = "pink"
 ```
 
-Mengambil element HTML menggunakan DOM JS dapat digunakan dengan cara di bawah ini :
+<b>Mengambil element HTML menggunakan DOM JS</b> dapat digunakan dengan cara di bawah ini :
 
-Mengambil Element berdasarkan ID
+1. Mengambil Element berdasarkan ID
 ```
   document.getElementById()
 ```
 
-Mengambil Element berdasarkan Class
+2. Mengambil Element berdasarkan Class
 ```
   document.getElementsByClassName()
 ```
-Mengambil Element berdasarkan NamaTag
+3. Mengambil Element berdasarkan NamaTag
 ```
   document.getElementsByTagName()
 ```
-Mengambil Element berdasarkan querySelector
+4. Mengambil Element berdasarkan querySelector
 ```
   document.querySelector()
 ```
-Mengambil Element berdasarkan querySelectorAll
+5. Mengambil Element berdasarkan querySelectorAll
 ```
   document.querySelectorAll()
 ```
