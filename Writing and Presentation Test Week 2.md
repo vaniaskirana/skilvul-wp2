@@ -81,7 +81,7 @@ typeof null // "object"  (2)
 
 ### **3. JavaScript Dasar - DOM Manipulation**
 
-- DOM Manipulation merupakan sebuah Teknik, yang mana teknik ini sangatlah penting dalam dunia perwebsite-an apalagi jika kita menggunakan bahasa JavaScript. DOM Manipulation itu sendiri adalah teknik yang dapat membuat tampilan website menjadi lebih interaktif dan dinamis, disini kita juga bisa melakukan perubahan style pada HTML tanpa harus menggunakan CSS juga. Berikut adalah perintah untuk melakukan manipulasi :
+- DOM Manipulation merupakan sebuah Teknik, yang mana teknik ini sangatlah penting dalam dunia perwebsite-an apalagi jika kita menggunakan bahasa JavaScript. DOM Manipulation itu sendiri adalah teknik yang dapat membuat tampilan website menjadi lebih interaktif dan dinamis, disini kita juga bisa melakukan perubahan style pada HTML tanpa harus menggunakan CSS juga. Berikut adalah perintah untuk melakukan manipulasi DOM:
 
 
 a. <b>innerHTML</b> : <hr> Merupakan perintah yang dapat menyisipkan sebuah value bertipe string pada sebuah variable. Dan unik nya lagi, pada DOM ini kita dapat menyisipkan element HTML lho.
@@ -155,6 +155,30 @@ link.style.color = "white"
 link.style.border = "1px solid aqua"
 link.style.padding = "5px 20px"
 link.style.backgroundColor = "pink"
+```
+
+Mengambil element HTML menggunakan DOM JS dapat digunakan dengan cara di bawah ini :
+
+Mengambil Element berdasarkan ID
+```
+  document.getElementById()
+```
+
+Mengambil Element berdasarkan Class
+```
+  document.getElementsByClassName()
+```
+Mengambil Element berdasarkan NamaTag
+```
+  document.getElementsByTagName()
+```
+Mengambil Element berdasarkan querySelector
+```
+  document.querySelector()
+```
+Mengambil Element berdasarkan querySelectorAll
+```
+  document.querySelectorAll()
 ```
 
 ### **4. JavaScript Dasar - Events dan Forms**
